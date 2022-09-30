@@ -17,7 +17,7 @@ router.get('/', (req, res) => {
 });
 
 router.get('/:id', (req, res) => {
-  console.log('GET /api/bikes/:id');
+  console.log('GET /api/movies/:id');
   const sqlQuery = `
   SELECT movies.id, title, description, poster,
   ARRAY_AGG (genres.name) genres
@@ -30,6 +30,18 @@ router.get('/:id', (req, res) => {
     GROUP BY movies.id, title, description, poster
 ;
   `
+
+  const sqlValues = [req.params.id];
+
+  pool.query(sqlQuery, sqlValues)
+    .then(response => {
+      res.send(response.rows[0])
+    })
+    .catch(error => {
+      console.log('GET /api/movies/:id Error', error)
+      res.sendStatus(500);
+    })
+
 })
 
 router.post('/', (req, res) => {
