@@ -16,7 +16,21 @@ router.get('/', (req, res) => {
 
 });
 
-
+router.get('/:id', (req, res) => {
+  console.log('GET /api/bikes/:id');
+  const sqlQuery = `
+  SELECT movies.id, title, description, poster,
+  ARRAY_AGG (genres.name) genres
+    FROM "movies"
+      JOIN movies_genres
+        ON movies.id=movies_genres.movie_id
+      JOIN genres
+        ON movies_genres.genre_id = genres.id
+    WHERE movies.id=1
+    GROUP BY movies.id, title, description, poster
+;
+  `
+})
 
 router.post('/', (req, res) => {
   console.log(req.body);
