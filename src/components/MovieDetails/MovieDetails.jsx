@@ -38,38 +38,44 @@ export default
     return (
         <>
 
-            <Grid container spacing={10} className='detailsContainer' vh={100}>
-                <Grid item xs={7}>
-                    <Card>
-                        <CardActions>
-                            <Button onClick={handleBack} variant='outlined'>BACK</Button>
-                        </CardActions>
-                        <CardContent>
-                            <Typography variant='h4'>
-                                {moviedetails.title}
-                            </Typography>
-                            <img src={moviedetails.poster} alt={moviedetails.title} />
-
-                        </CardContent>
-                        <CardContent>
-                            {genresArray.map(genre => (
-                                <Typography key={genre}>
-                                    {genre}
+            <Grid container spacing={12} className='detailsContainer' vh={100} xs={12} justifySelf='center'>
+                <Grid item container xs={7}>
+                    <Grid item xs={12}>
+                        <Card a>
+                            <CardActions>
+                                <Button onClick={handleBack} variant='outlined'>BACK</Button>
+                            </CardActions>
+                            <CardContent>
+                                <Typography variant='h4'>
+                                    {moviedetails.title}
                                 </Typography>
-                            ))}
-                        </CardContent>
+                                <img src={moviedetails.poster} alt={moviedetails.title} />
+
+                            </CardContent>
+                            <CardContent>
+                                {genresArray.map(genre => (
+                                    <Typography key={genre}>
+                                        {genre}
+                                    </Typography>
+                                ))}
+                            </CardContent>
 
 
-                    </Card>
+                        </Card>
+
+                    </Grid>
                 </Grid>
-                <Grid item xs={4}>
-                    <Card>
-                        <CardContent>
+                <Grid item container xs={5} direction='column'>
+                    <Grid item>
+                        <Card>
+                            <CardContent>
 
-                            <Typography variant='body2'>{moviedetails.description}</Typography>
+                                <Typography variant='body2'>{moviedetails.description}</Typography>
 
-                        </CardContent>
-                    </Card>
+                            </CardContent>
+                        </Card>
+                    </Grid>
+
                 </Grid>
             </Grid>
 
