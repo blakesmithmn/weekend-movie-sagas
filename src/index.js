@@ -43,6 +43,10 @@ function* fetchMovieDetails(action) {
             type: 'SET_MOVIE_DETAILS',
             payload: moviedetailsRes.data
         })
+        yield put({
+            type: 'SET_GENRES',
+            payload: moviedetailsRes.data.genres
+        })
     } catch (error) {
         console.log('Error in fetching Details', error);
     }

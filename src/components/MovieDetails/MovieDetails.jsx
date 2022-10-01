@@ -13,6 +13,8 @@ export default
     const history = useHistory();
 
     const moviedetails = useSelector(store => store.moviedetails);
+    const genresArray = useSelector(store => store.genres);
+
     const params = useParams();
 
     useEffect(() => {
@@ -49,6 +51,13 @@ export default
                             <img src={moviedetails.poster} alt={moviedetails.title} />
 
                         </CardContent>
+                        <CardContent>
+                            {genresArray.map(genre => (
+                                <Typography key={genre}>
+                                    {genre}
+                                </Typography>
+                            ))}
+                        </CardContent>
 
 
                     </Card>
@@ -56,6 +65,7 @@ export default
                 <Grid item xs={4}>
                     <Card>
                         <CardContent>
+
                             <Typography variant='body2'>{moviedetails.description}</Typography>
 
                         </CardContent>
