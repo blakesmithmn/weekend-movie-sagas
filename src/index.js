@@ -14,6 +14,7 @@ import axios from 'axios';
 // Create the rootSaga generator function
 function* rootSaga() {
     yield takeEvery('FETCH_MOVIES', fetchAllMovies);
+    yield takeEvery('FETCH_MOVIE_DETAILS', fetchMovieDetails)
 }
 
 function* fetchAllMovies() {
@@ -29,8 +30,10 @@ function* fetchAllMovies() {
 
 }
 
-function* fetchMovieDetails() {
+function* fetchMovieDetails(action) {
+
     try {
+        console.log('AP IS CURRENTLY:', action.payload)
         const movieID = action.payload;
         const moviedetailsRes = yield axios({
             method: 'GET',

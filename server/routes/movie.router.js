@@ -26,7 +26,7 @@ router.get('/:id', (req, res) => {
         ON movies.id=movies_genres.movie_id
       JOIN genres
         ON movies_genres.genre_id = genres.id
-    WHERE movies.id=1
+    WHERE movies.id=$1
     GROUP BY movies.id, title, description, poster
 ;
   `
