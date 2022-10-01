@@ -21,7 +21,6 @@ function MovieList() {
 
     return (
         <main>
-            <h1>MovieList</h1>
             <section className="movies">
                 <Grid container spacing={4} className='movies' vh={100}>
                     {movies.map(movie => {
