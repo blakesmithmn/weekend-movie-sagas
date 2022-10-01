@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import './MovieList.css'
+import { Paper, Card, CardContent, Typography, Button, CardActions, Box, Grid } from '@mui/material';
+
 
 function MovieList() {
     const history = useHistory();
@@ -21,16 +23,25 @@ function MovieList() {
         <main>
             <h1>MovieList</h1>
             <section className="movies">
-                {movies.map(movie => {
-                    return (
-                        <div key={movie.id} onClick={(e) => { showDetails(movie) }}>
-                            <h3>{movie.title}</h3>
-                            <img src={movie.poster} alt={movie.title} />
-                        </div>
-                    );
-                })}
+                <Grid container spacing={4} className='movies' vh={100}>
+                    {movies.map(movie => {
+                        return (
+                            <Grid item key={movie.id} onClick={(e) => { showDetails(movie) }} xs={4}>
+                                <Card>
+                                    <CardContent>
+                                        <Typography variant='h3'>{movie.title}</Typography>
+                                    </CardContent>
+                                    <CardContent>
+                                        <img src={movie.poster} alt={movie.title} />
+                                    </CardContent>
+                                </Card>
+                            </Grid>
+                        );
+                    })}
+
+                </Grid>
             </section>
-        </main>
+        </main >
 
     );
 }

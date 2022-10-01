@@ -1,11 +1,10 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import Grid from '@mui/material/Grid';
 import { useParams } from 'react-router-dom';
 import { useHistory } from 'react-router-dom';
 
 // MUI IMPORTS
-import { Paper, Card, CardContent, Typography, Button, CardActions, Box } from '@mui/material';
+import { Paper, Card, CardContent, Typography, Button, CardActions, Box, Grid } from '@mui/material';
 
 
 export default
