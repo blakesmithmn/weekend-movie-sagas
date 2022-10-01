@@ -4,19 +4,42 @@ import MovieList from '../MovieList/MovieList'
 import MovieDetails from '../MovieDetails/MovieDetails';
 import Header from '../Header/Header';
 
+// MUI IMPORTS
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+
+
 function App() {
+
+  const theme = createTheme({
+    palette: {
+      primary: {
+        main: '#1B2021',
+        contrastText: '#DAF5FF',
+      },
+      secondary: {
+        main: '#028090',
+        contrastText: '#FFFFFF',
+      },
+      background: {
+        paper: '#F4F5F5',
+      }
+    },
+  });
+
   return (
     <div className="App">
-      <Router>
-        <Header />
-        <Route exact path="/">
-          <MovieList />
-        </Route>
-        <Route exact path='/details/:id' >
-          <MovieDetails />
-        </Route>
-        {/* Add Movie page */}
-      </Router>
+      <ThemeProvider theme={theme}>
+        <Router>
+          <Header />
+          <Route exact path="/">
+            <MovieList />
+          </Route>
+          <Route exact path='/details/:id' >
+            <MovieDetails />
+          </Route>
+          {/* Add Movie page */}
+        </Router>
+      </ThemeProvider>
     </div>
   );
 }
