@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import './MovieList.css'
-import { Paper, Card, CardContent, Typography, Button, CardActions, Box, Grid } from '@mui/material';
+import { Paper, Card, CardContent, Typography, Button, CardActions, Box, Grid, CardMedia } from '@mui/material';
 
 
 function MovieList() {
@@ -21,25 +21,29 @@ function MovieList() {
 
     return (
         <main>
-            <section className="movies">
-                <Grid container spacing={4} className='movies' vh={100}>
-                    {movies.map(movie => {
-                        return (
-                            <Grid item key={movie.id} onClick={(e) => { showDetails(movie) }} xs={4}>
-                                <Card>
-                                    <CardContent>
-                                        <Typography variant='h3'>{movie.title}</Typography>
-                                    </CardContent>
-                                    <CardContent>
-                                        <img src={movie.poster} alt={movie.title} />
-                                    </CardContent>
-                                </Card>
-                            </Grid>
-                        );
-                    })}
 
-                </Grid>
-            </section>
+            <Grid container spacing={4} className='movies' vh={100}>
+                {movies.map(movie => {
+                    return (
+                        <Grid item key={movie.id} xs={12} sm={12} md={6} lg={4}>
+                            <Card className='MovieListItem'>
+                                <CardContent>
+                                    <Typography variant='h5'>{movie.title}</Typography>
+                                </CardContent>
+                                <CardMedia
+                                    component="img"
+                                    image={movie.poster}
+                                    alt={movie.title}
+                                    onClick={(e) => { showDetails(movie) }}
+                                    sx={{ width: .80 }}
+                                />
+                            </Card>
+                        </Grid>
+                    );
+                })}
+
+            </Grid>
+
         </main >
 
     );
