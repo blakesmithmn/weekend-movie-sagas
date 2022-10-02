@@ -1,0 +1,19 @@
+.MoviePhotoItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 15px;
+}
+
+.MoviePhotoItem>button {
+    justify-self: start;
+}
+
+.MovieDetailsCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 15px;
+}

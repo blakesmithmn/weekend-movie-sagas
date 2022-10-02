@@ -21,7 +21,7 @@ function App() {
         contrastText: '#FFFFFF',
       },
       background: {
-        paper: '#F4F5F5',
+        paper: 'rgba(244,245,245,0.7)',
       }
     },
   });
