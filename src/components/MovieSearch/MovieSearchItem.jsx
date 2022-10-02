@@ -4,6 +4,29 @@ import { useState } from 'react';
 
 
 export default function MovieSearchItem({ movie }) {
+    const dispatch = useDispatch();
+
+    // MOVIE VARIABLES 
+    const movietitle = movie.title;
+
+    const movieposter = `https://image.tmdb.org/t/p/original/${movie.poster_path}`
+    const moviedescription = movie.overview;
+
+    const addToMovieList = () => {
+        console.log(movietitle);
+        console.log(movieposter);
+        console.log(moviedescription);
+        dispatch({
+            type: 'SAGA_ADD_TO_MOVIES',
+            payload: {
+                title: movietitle,
+                poster: movieposter,
+                description: moviedescription,
+            }
+        })
+    }
+
+
     return (
         <Grid item xs={12} sm={12} md={6} lg={4} key={movie.id}>
             <Card className='MovieSearchItem'>
@@ -25,7 +48,7 @@ export default function MovieSearchItem({ movie }) {
                     </Typography>
                 </CardContent>
                 <CardActions>
-                    <Button variant='contained' onClick={ }>Add Favorite</Button>
+                    <Button variant='contained' onClick={addToMovieList}>Add Favorite</Button>
                 </CardActions>
 
 

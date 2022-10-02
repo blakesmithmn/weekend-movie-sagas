@@ -16,7 +16,10 @@ function* rootSaga() {
     yield takeEvery('FETCH_MOVIES', fetchAllMovies);
     yield takeEvery('FETCH_MOVIE_DETAILS', fetchMovieDetails);
     yield takeEvery('SAGA_SEARCH_MOVIES', searchMovieAPI);
+    yield takeEvery('SAGA_ADD_TO_MOVIES', addToMovies)
 }
+
+
 
 function* fetchAllMovies() {
     // get all movies from the DB
@@ -29,6 +32,22 @@ function* fetchAllMovies() {
         console.log('get all error');
     }
 
+}
+
+function* addToMovies(action) {
+    try {
+        yield axios({
+            method: 'POST',
+            url: '/api/movie',
+            data: action.payload
+        })
+        yield put({
+            type: 'FETCH_MOVIES'
+        })
+    }
+    catch (error) {
+        console.log('ERROR in POST new MOVIE:', error);
+    }
 }
 
 function* fetchMovieDetails(action) {
@@ -68,7 +87,6 @@ function* searchMovieAPI(action) {
             type: 'SET_SEARCH_RESULTS',
             payload: searchRes.data
         })
-        console.log(searchRes);
     } catch (error) {
         console.log('Error in Movie API GET:', error);
     }
