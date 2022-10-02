@@ -1,6 +1,6 @@
 [] COMMENTS IN CODE
 
-[] Background Pattern
+[X] Background Pattern
 
 [] Header
     [] It's ugly

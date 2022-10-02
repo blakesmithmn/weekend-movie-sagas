@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { useHistory } from 'react-router-dom';
 import './MovieDetails.css'
+import GenreDropdown from './GenreDropdown';
 
 
 // MUI IMPORTS
@@ -77,10 +78,12 @@ export default
                             <CardContent>
                                 <Typography variant='h6'>Genre(s):</Typography>
                                 {genresArray.map(genre => (
+
                                     <Typography key={genre}>
                                         {genre}
                                     </Typography>
                                 ))}
+                                <GenreDropdown />
                             </CardContent>
                         </Card>
                     </Grid>

@@ -29,53 +29,61 @@ CREATE TABLE "movies_genres" (
 -- starter movies
 INSERT INTO "movies" ("title", "poster", "description")
 VALUES 
-('Avatar', 'images/avatar.jpeg', 'Avatar (marketed as James Cameron''s Avatar) is a 2009 American epic science fiction film directed, written, produced, and co-edited by James Cameron, and stars Sam Worthington, Zoe Saldana, Stephen Lang, Michelle Rodriguez, and Sigourney Weaver. The film is set in the mid-22nd century, when humans are colonizing Pandora, a lush habitable moon of a gas giant in the Alpha Centauri star system, in order to mine the mineral unobtanium, a room-temperature superconductor. The expansion of the mining colony threatens the continued existence of a local tribe of Na''vi – a humanoid species indigenous to Pandora. The film''s title refers to a genetically engineered Na''vi body operated from the brain of a remotely located human that is used to interact with the natives of Pandora.'),
-('Beauty and the Beast', 'images/beauty-and-the-beast.jpg', 'Beauty and the Beast is a 2017 American musical romantic fantasy film directed by Bill Condon from a screenplay written by Stephen Chbosky and Evan Spiliotopoulos. Co-produced by Walt Disney Pictures and Mandeville Films, it was filmed in the UK with predominantly British principal actors. The film is a live-action remake of Disney''s 1991 animated film of the same name, itself an adaptation of Jeanne-Marie Leprince de Beaumont''s 18th-century fairy tale. The film features an ensemble cast that includes Emma Watson and Dan Stevens as the eponymous characters with Luke Evans, Kevin Kline, Josh Gad, Ewan McGregor, Stanley Tucci, Audra McDonald, Gugu Mbatha-Raw, Ian McKellen, and Emma Thompson in supporting roles.'),
-('Captain Marvel', 'images/captain-marvel.jpg', 'Captain Marvel is a 2019 American superhero film based on the Marvel Comics character Carol Danvers. Produced by Marvel Studios and distributed by Walt Disney Studios Motion Pictures, it is the twenty-first film in the Marvel Cinematic Universe (MCU). The film is written and directed by Anna Boden and Ryan Fleck, with Geneva Robertson-Dworet also contributing to the screenplay. Brie Larson stars as Danvers, alongside Samuel L. Jackson, Ben Mendelsohn, Djimon Hounsou, Lee Pace, Lashana Lynch, Gemma Chan, Annette Bening, Clark Gregg, and Jude Law. Set in 1995, the story follows Danvers as she becomes Captain Marvel after Earth is caught in the center of a galactic conflict between two alien civilizations.'),
-('Finding Nemo', 'images/finding-nemo.jpg', 'Finding Nemo is a 2003 American computer-animated adventure film produced by Pixar Animation Studios and released by Walt Disney Pictures. Written and directed by Andrew Stanton with co-direction by Lee Unkrich, the film stars the voices of Albert Brooks, Ellen DeGeneres, Alexander Gould, and Willem Dafoe. It tells the story of the overprotective ocellaris clownfish named Marlin who, along with a regal blue tang named Dory, searches for his abducted son Nemo all the way to Sydney Harbour. Along the way, Marlin learns to take risks and comes to terms with Nemo taking care of himself.'),
-('Gone Girl', 'images/gone-girl.jpg', 'Gone Girl is a 2014 American psychological thriller film directed by David Fincher and written by Gillian Flynn, based on her popular 2012 novel of the same title. The film stars Ben Affleck, Rosamund Pike, Neil Patrick Harris, and Tyler Perry. Set in Missouri, the story begins as a mystery that follows the events surrounding Nick Dunne (Affleck), who becomes the primary suspect in the sudden disappearance of his wife Amy (Pike).'),
-('The Double Life of Véronique', 'images/double-life.jpg', 'Véronique (Irène Jacob) is a beautiful young French woman who aspires to be a renowned singer; Weronika (also Jacob) lives in Poland, has a similar career goal and looks identical to Véronique, though the two are not related. The film follows both women as they contend with the ups and downs of their individual lives, with Véronique embarking on an unusual romance with Alexandre Fabbri (Philippe Volter), a puppeteer who may be able to help her with her existential issues.'),
-('James Bond: Goldfinger', 'images/james-bond.jpg', 'Goldfinger is a 1964 British spy film and the third installment in the James Bond series produced by Eon Productions, starring Sean Connery as the fictional MI6 agent James Bond. It is based on the novel of the same name by Ian Fleming. The film also stars Honor Blackman as Bond girl Pussy Galore and Gert Fröbe as the title character Auric Goldfinger, along with Shirley Eaton as the iconic Bond girl Jill Masterson. Goldfinger was produced by Albert R. Broccoli and Harry Saltzman and was the first of four Bond films directed by Guy Hamilton.'),
-('Life of Pi', 'images/life-of-pi.jpeg', 'Life of Pi is a 2012 survival drama film based on Yann Martel''s 2001 novel of the same name. Directed by Ang Lee, the film''s adapted screenplay was written by David Magee, and it stars Suraj Sharma, Irrfan Khan, Rafe Spall, Tabu Hashmi, Adil Hussain, and Gérard Depardieu. The storyline revolves around an Indian man named "Pi" Patel, telling a novelist about his life story, and how at 16 he survives a shipwreck and is adrift in the Pacific Ocean on a lifeboat with a Bengal tiger. The film had its worldwide premiere as the opening film of the 51st New York Film Festival at both the Walter Reade Theater and Alice Tully Hall in New York City on September 28, 2012.'),
-('Monsters, Inc.', 'images/monsters-inc.jpg', 'Monsters, Inc. is a 2001 American computer-animated comedy film produced by Pixar Animation Studios and distributed by Walt Disney Pictures. Featuring the voices of John Goodman, Billy Crystal, Steve Buscemi, James Coburn, and Jennifer Tilly, the film was directed by Pete Docter in his directorial debut, and executive produced by John Lasseter and Andrew Stanton. The film centers on two monsters – James P. "Sulley" Sullivan and his one-eyed partner and best friend Mike Wazowski – employed at the titular energy-producing factory Monsters, Inc, which generates power by scaring human children. The monster world believes that children are toxic, and when a small child enters the factory, Sulley and Mike must return her home before it is too late.'),
-('Star Wars: The Last Jedi', 'images/star-wars.jpg', 'Star Wars: The Last Jedi (also known as Star Wars: Episode VIII – The Last Jedi) is a 2017 American epic space-opera film written and directed by Rian Johnson. It is the second installment of the Star Wars sequel trilogy, following The Force Awakens (2015), and the eighth episode of the main Star Wars film franchise. It was produced by Lucasfilm and distributed by Walt Disney Studios Motion Pictures. The film''s ensemble cast includes Mark Hamill, Carrie Fisher, Adam Driver, Daisy Ridley, John Boyega, Oscar Isaac, Andy Serkis, Lupita Nyong''o, Domhnall Gleeson, Anthony Daniels, Gwendoline Christie, and Frank Oz in returning roles, with Kelly Marie Tran, Laura Dern and Benicio del Toro joining the cast. It features the first posthumous film performance by Fisher, who died in December 2016, and the film is dedicated to her memory. The plot follows Rey as she receives Jedi training from Luke Skywalker, in hopes of turning the tide for the Resistance in the fight against Kylo Ren and the First Order, while General Leia Organa, Finn, and Poe Dameron attempt to escape a First Order attack on the dwindling Resistance fleet.'),
-('The Martian', 'images/the-martian.jpg', 'The Martian is a 2015 science fiction film directed by Ridley Scott and starring Matt Damon adapted from the novel of the same name by Andy Weir. The film depicts an astronaut''s lone struggle to survive on Mars after being left behind, and efforts to rescue him, and bring him home to Earth. It also stars Jessica Chastain, Kristen Wiig, Jeff Daniels, Michael Peña, Kate Mara, Sean Bean, Sebastian Stan, Donald Glover, Aksel Hennie, and Chiwetel Ejiofor.'),
-('The Social Network', 'images/the-social-network.jpg', 'The Social Network is a 2010 American biographical drama film directed by David Fincher and written by Aaron Sorkin. Adapted from Ben Mezrich''s 2009 book The Accidental Billionaires: The Founding of Facebook, a Tale of Sex, Money, Genius and Betrayal, the film portrays the founding of social networking website Facebook and the resulting lawsuits. It stars Jesse Eisenberg as founder Mark Zuckerberg, along with Andrew Garfield as Eduardo Saverin, Justin Timberlake as Sean Parker, Armie Hammer as Cameron and Tyler Winklevoss, and Max Minghella as Divya Narendra. Neither Zuckerberg nor any other Facebook staff were involved with the project, although Saverin was a consultant for Mezrich''s book. The film was released in the United States by Columbia Pictures on October 1, 2010.'),
-('Titanic', 'images/titanic.jpg', 'Titanic is a 1997 American epic romance and disaster film directed, written, co-produced, and co-edited by James Cameron. A fictionalized account of the sinking of the RMS Titanic, it stars Leonardo DiCaprio and Kate Winslet as members of different social classes who fall in love aboard the ship during its ill-fated maiden voyage.'),
-('Toy Story', 'images/toy-story.jpg', 'Toy Story is a 1995 American computer-animated adventure comedy film produced by Pixar Animation Studios and released by Walt Disney Pictures. The feature-film directorial debut of John Lasseter, it was the first feature-length film to be entirely computer-animated, as well as the first feature film from Pixar. The screenplay was written by Joss Whedon, Andrew Stanton, Joel Cohen, and Alec Sokolow from a story by Lasseter, Stanton, Pete Docter, and Joe Ranft. The film features music by Randy Newman, and was executive-produced by Steve Jobs and Edwin Catmull. The film features the voices of Tom Hanks, Tim Allen, Don Rickles, Wallace Shawn, John Ratzenberger, Jim Varney, Annie Potts, R. Lee Ermey, John Morris, Laurie Metcalf, and Erik von Detten. Taking place in a world where anthropomorphic toys come to life when humans are not present, its plot focuses on the relationship between an old-fashioned pull-string cowboy doll named Woody and an astronaut action figure, Buzz Lightyear, as they evolve from rivals competing for the affections of their owner Andy Davis to friends who work together to be reunited with him after being separated.');
+('Everything Everywhere All at Once', 'https://image.tmdb.org/t/p/original//w3LxiVYdWWRvEVdn5RYq6jIqkb1.jpg', 'An aging Chinese immigrant is swept up in an insane adventure, where she alone can save what''s important to her by connecting with the lives she could have led in other universes.'),
+('Her', 'https://image.tmdb.org/t/p/original//yk4J4aewWYNiBhD49WD7UaBBn37.jpg', 'In the not so distant future, Theodore, a lonely writer purchases a newly developed operating system designed to meet the user's every needs. To Theodore's surprise, a romantic relationship develops between him and his operating system. This unconventional love story blends science fiction and romance in a sweet tale that explores the nature of love and the ways that technology isolates and connects us all.'),
+('Nope', 'https://image.tmdb.org/t/p/original//AcKVlWaNVVVFQwro3nLXqPljcYA.jpg', 'Residents in a lonely gulch of inland California bear witness to an uncanny, chilling discovery.'),
+('Spirited Away', 'https://image.tmdb.org/t/p/original//39wmItIWsg5sZMyRUHLkWBcuVCM.jpg', 'A young girl, Chihiro, becomes trapped in a strange new world of spirits. When her parents undergo a mysterious transformation, she must call upon the courage she never knew she had to free her family.'),
+('Lady Bird', 'https://image.tmdb.org/t/p/original//iySFtKLrWvVzXzlFj7x1zalxi5G.jpg', 'Lady Bird McPherson, a strong willed, deeply opinionated, artistic 17 year old comes of age in Sacramento. Her relationship with her mother and her upbringing are questioned and tested as she plans to head off to college.'),
+('Inception', 'https://image.tmdb.org/t/p/original//8IB2e4r4oVhHnANbnm7O3Tj6tF8.jpg', 'Cobb, a skilled thief who commits corporate espionage by infiltrating the subconscious of his targets is offered a chance to regain his old life as payment for a task considered to be impossible: "inception", the implantation of another person''s idea into a target''s subconscious.'),
+('Get Out', 'https://image.tmdb.org/t/p/original//tFXcEccSQMf3lfhfXKSU9iRBpa3.jpg', 'Chris and his girlfriend Rose go upstate to visit her parents for the weekend. At first, Chris reads the family's overly accommodating behavior as nervous attempts to deal with their daughter's interracial relationship, but as the weekend progresses, a series of increasingly disturbing discoveries lead him to a truth that he never could have imagined.'),
+('Parasite', 'https://image.tmdb.org/t/p/original//7IiTTgloJzvGI1TAYymCfbfl3vT.jpg', 'All unemployed, Ki-taek''s family takes peculiar interest in the wealthy and glamorous Parks for their livelihood until they get entangled in an unexpected incident.' ),
+('The Shining', 'https://image.tmdb.org/t/p/original//nRj5511mZdTl4saWEPoj9QroTIu.jpg', 'Jack Torrance accepts a caretaker job at the Overlook Hotel, where he, along with his wife Wendy and their son Danny, must live isolated from the rest of the world for the winter. But they aren''t prepared for the madness that lurks within.');
+
 
 -- starter genres
 INSERT INTO "genres" ("name")
 VALUES 
-('Adventure'),
-('Animated'),
-('Biographical'),
-('Comedy'),
-('Disaster'),
-('Drama'),
-('Epic'),
-('Fantasy'),
-('Musical'),
-('Romantic'),         --10
-('Science Fiction'),  --11
-('Space-Opera'),      --12
-('Superhero');        --13
+('Adventure'), --1
+('Animated'), --2
+('Superhero'), --3
+('Comedy'), --4
+('Drama'), --5
+('Romance'), --6
+('Fantasy'),  --7
+('Horror'),   --8      
+('Science Fiction'),  --9
+('LGBTQIA+'), --10
+('Thriller'),      --11
+('Unspecified') --12;        
 
 
 -- starter movies and genres data
 INSERT INTO "movies_genres" ("movie_id", "genre_id")
 VALUES 
-(1,1), (1,3), (1,4),      -- Avatar
-(2,1), (2,11), (2,12),    -- Beauty
-(3,3),                    -- Cpt Marvel
-(4,4), (4,7),             -- Nemo
-(5,3),                    -- Gone Girl
-(6,12),                   -- Véronique
-(7,9),(7,2),              -- Bond
-(8,4),                    -- Pi
-(9,4),                    -- Monsters
-(10,4),                   -- Star Wars
-(11,6), (11,11),          -- Martian
-(12,8), (12,9),           -- Social Net
-(13,4), (13,10), (13,6),  -- Titanic
-(14,3), (14,2), (14,4);   -- Toy Story
+(1,9),(1,5),(1,10), --EEAAW
+(2,5), (2,6), (2,9), --HER
+(3,9), (3,11), --NOPE
+(4,1), (4,7), (4,2), --SPIRITEDAWAY
+(5,5), (5,4), --LADYBIRD
+(6,11), (6,9), (6,7), --INCEPTION
+(7,8), (7,11), (7,5), --GETOUT
+(8,11), (8,4), 	--PARASITE
+(9,8), (9,11),(9,7);   --THESHINING   
+
+
+-- SQL QUERY SERVERSIDE
+SELECT 
+      movies.id,
+      title,
+      description,
+      poster,
+      ARRAY_AGG (genres.name) genres
+    FROM "movies"
+      JOIN movies_genres
+        ON movies.id=movies_genres.movie_id
+      JOIN genres
+      	ON movies_genres.genre_id = genres.id
+      WHERE movies.id=1
+      GROUP BY movies.id, title, description, poster
+;
+
