@@ -14,8 +14,12 @@ import axios from 'axios';
 // Create the rootSaga generator function
 function* rootSaga() {
     yield takeEvery('FETCH_MOVIES', fetchAllMovies);
-    yield takeEvery('FETCH_MOVIE_DETAILS', fetchMovieDetails)
+    yield takeEvery('FETCH_MOVIE_DETAILS', fetchMovieDetails);
+    yield takeEvery('SAGA_SEARCH_MOVIES', searchMovieAPI);
+    yield takeEvery('SAGA_ADD_TO_MOVIES', addToMovies)
 }
+
+
 
 function* fetchAllMovies() {
     // get all movies from the DB
@@ -28,6 +32,22 @@ function* fetchAllMovies() {
         console.log('get all error');
     }
 
+}
+
+function* addToMovies(action) {
+    try {
+        yield axios({
+            method: 'POST',
+            url: '/api/movie',
+            data: action.payload
+        })
+        yield put({
+            type: 'FETCH_MOVIES'
+        })
+    }
+    catch (error) {
+        console.log('ERROR in POST new MOVIE:', error);
+    }
 }
 
 function* fetchMovieDetails(action) {
@@ -49,6 +69,26 @@ function* fetchMovieDetails(action) {
         })
     } catch (error) {
         console.log('Error in fetching Details', error);
+    }
+}
+
+
+function* searchMovieAPI(action) {
+    // action.payload should be a string
+    const search = action.payload;
+    console.log('Search Query:', search);
+
+    try {
+        const searchRes = yield axios({
+            method: 'GET',
+            url: `/search/${search}`
+        })
+        yield put({
+            type: 'SET_SEARCH_RESULTS',
+            payload: searchRes.data
+        })
+    } catch (error) {
+        console.log('Error in Movie API GET:', error);
     }
 }
 
@@ -86,12 +126,22 @@ const genres = (state = [], action) => {
     }
 }
 
+const searchResults = (state = [], action) => {
+    switch (action.type) {
+        case 'SET_SEARCH_RESULTS':
+            return action.payload;
+        default:
+            return state;
+    }
+}
+
 // Create one store that all components can use
 const storeInstance = createStore(
     combineReducers({
         movies,
         genres,
         moviedetails,
+        searchResults,
     }),
     // Add sagaMiddleware to our store
     applyMiddleware(sagaMiddleware, logger),
