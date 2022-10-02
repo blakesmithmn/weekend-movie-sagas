@@ -23,7 +23,6 @@ export default function GenreDropdown() {
             <InputLabel>Genres</InputLabel>
             <Select
                 value={''}
-
                 onChange={handleGenreChange}
             >
                 <MenuItem value={genresArray[0]?.id}>{genresArray[0]?.name}</MenuItem>

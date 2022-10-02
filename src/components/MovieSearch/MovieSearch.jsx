@@ -26,20 +26,20 @@ export default function MovieSearch() {
         <>
             <Grid container spacing={4}>
                 <Grid item xs={12}>
-                    <Card>
-                        <form onSubmit={submitSearch}>
-                            <TextField
-                                id='outlined-basic'
-                                size='small'
-                                label='Search'
-                                variant='outlined'
-                                value={search}
-                                onChange={(event) => setSearch(event.target.value)}
-                            />
 
-                            <Button id='button' type='submit' variant='contained'>Search</Button>
-                        </form>
-                    </Card>
+                    <form onSubmit={submitSearch}>
+                        <TextField
+                            id='outlined-basic'
+                            size='small'
+                            label='Search'
+                            variant='outlined'
+                            value={search}
+                            onChange={(event) => setSearch(event.target.value)}
+                        />
+
+                        <Button id='button' type='submit' variant='contained'>Search</Button>
+                    </form>
+
                 </Grid>
                 {searchResults.map(movie => {
                     return (
