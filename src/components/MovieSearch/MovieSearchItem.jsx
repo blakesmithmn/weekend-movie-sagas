@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 
 
+
 export default function MovieSearchItem({ movie }) {
     const dispatch = useDispatch();
     const history = useHistory();
