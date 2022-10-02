@@ -1,13 +1,11 @@
 [] COMMENTS IN CODE
 
-[] Fix Card Styling
-    [] Alignment is off in both List/Detail View
-
-[] Detail View Grid
-    [] In Small Screens the Proportions are off
+[] Background Pattern
 
 [] Header
     [] It's ugly
+    [] Resizes Weird on Mobile
+
 
 [] Themeing
     [] Finalize Color Pallette
@@ -16,29 +14,25 @@
 
 [] README
     [] DB Table Flowchart
+    [] Acknowledge movie database api
 
 [] Make Movie Selection more Personal
+    [] Delete dummy data after figuring out genre drop down
 
 [] On Hover for Posters on Movie List?
+
+[] Search Bar Formatting for Visibility
 
 
 ***** STRETCH GOALS *****
 
-[] Add Movie Form
-    [] POST ROUTE
-    [] Input for Title
-    [] Input for Poster Image
-    [] Textarea for description
+[X] Add Movie Form
+    [X] POST ROUTE
+    [X] Input for Title
+    [X] Input for Poster Image
+    [X] Textarea for description
     [] Dropdown for Genres
-    [] CANCEL BUTTON - push '/'
-        [] Clear Inputs?
-    [] SUBMIT - push '/'
-
-[] Genre Links in Header
-    [] Return only the movies with matching Genres
-
-[] Search Bar
-    [] Client or Server Side
+    [X] SUBMIT - push '/'
 
 
 

@@ -29,8 +29,3 @@
     transform: rotate(360deg);
   }
 }
-
-body {
-  background-image: url(../../../public/images/background.jpeg);
-  margin: 10px;
-}

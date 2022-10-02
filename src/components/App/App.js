@@ -14,15 +14,15 @@ function App() {
   const theme = createTheme({
     palette: {
       primary: {
-        main: '#1B2021',
-        contrastText: '#DAF5FF',
+        main: '#333533',
+        contrastText: '#574AE2',
       },
       secondary: {
-        main: '#028090',
-        contrastText: '#FFFFFF',
+        main: '#202020',
+        contrastText: '#FFD100',
       },
       background: {
-        paper: 'rgba(244,245,245,0.7)',
+        paper: 'rgba(244,245,245,0.5)',
       }
     },
   });
