@@ -1,25 +1,16 @@
 [] COMMENTS IN CODE
 
-[X] Background Pattern
-
 [] Header
     [] It's ugly
     [] Resizes Weird on Mobile
 
-
 [] Themeing
-    [] Finalize Color Pallette
     [] Touch up Button Colors
-    [] Button Styling in theme?
 
 [] README
     [] DB Table Flowchart
     [] Acknowledge movie database api
 
-[] Make Movie Selection more Personal
-    [] Delete dummy data after figuring out genre drop down
-
-[] On Hover for Posters on Movie List?
 
 [] Search Bar Formatting for Visibility
 
