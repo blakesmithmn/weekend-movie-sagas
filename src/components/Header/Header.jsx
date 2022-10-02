@@ -8,24 +8,31 @@ import MenuIcon from '@mui/icons-material/Menu';
 
 export default function Header() {
     const history = useHistory();
-    const navigationSwitch = () => {
-        history.push('/')
+    const navigationSwitch = (navigation) => {
+        history.push(navigation);
+
     };
 
     return (
         <header className='App-header'>
-            <Container maxWidth='xl'>
-                <AppBar position='fixed' color='secondary' className='headerComponent'>
+            <Container maxWidth='md'>
+                <AppBar position='fixed' color='secondary' className='headerComponent' >
                     <Grid container>
-                        <Grid item xs={1} textAlign='left'>
-                            <Button variant='filled' onClick={navigationSwitch}>
-                                Back
-                            </Button>
-                        </Grid>
-                        <Grid item xs={11} textAlign='center'>
+                        <Grid item xs={7} sm={6} textAlign='left'>
                             <Typography variant='h4'>
                                 The Movies Saga
                             </Typography>
+                        </Grid>
+                        <Grid item xs={6} sm={6} textAlign='right'>
+                            <ButtonGroup>
+                                <Button variant='contained' color='secondary' onClick={(e) => navigationSwitch('/')}>
+                                    Home
+                                </Button>
+                                <Button variant='contained' color='secondary' onClick={(e) => navigationSwitch('/search')}>
+                                    Search
+                                </Button>
+
+                            </ButtonGroup>
                         </Grid>
 
                     </Grid>

@@ -1,11 +1,12 @@
 import { Paper, Card, CardContent, Typography, Button, CardActions, Box, Grid, CardMedia, FormGroup, TextField } from '@mui/material';
 import { useDispatch, useSelector } from 'react-redux';
 import { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 
 
 export default function MovieSearchItem({ movie }) {
     const dispatch = useDispatch();
-
+    const history = useHistory();
     // MOVIE VARIABLES 
     const movietitle = movie.title;
 
@@ -24,6 +25,7 @@ export default function MovieSearchItem({ movie }) {
                 description: moviedescription,
             }
         })
+        history.push('/');
     }
 
 
