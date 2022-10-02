@@ -3,6 +3,7 @@ import './App.css';
 import MovieList from '../MovieList/MovieList'
 import MovieDetails from '../MovieDetails/MovieDetails';
 import Header from '../Header/Header';
+import MovieSearch from '../MovieSearch/MovieSearch';
 
 // MUI IMPORTS
 import { createTheme, ThemeProvider } from '@mui/material/styles';
@@ -37,7 +38,9 @@ function App() {
           <Route exact path='/details/:id' >
             <MovieDetails />
           </Route>
-          {/* Add Movie page */}
+          <Route exact path='/search'>
+            <MovieSearch />
+          </Route>
         </Router>
       </ThemeProvider>
     </div>
