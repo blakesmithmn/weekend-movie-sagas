@@ -12,14 +12,19 @@ import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 
 export default
     function MovieDetails() {
+    // THIS IS THE DETAIL VIEW YOU GET PUSHED TO AFTER CLICKING ON A PHOTO
+
     const dispatch = useDispatch();
     const history = useHistory();
 
+    // ARRAYS WE WILL MAP LATER FOR THE MOVIE DETAILS AND ITS GENRES
+    // SQL JOIN GRABS THE GENRES!
     const moviedetails = useSelector(store => store.moviedetails);
     const genresArray = useSelector(store => store.genres);
 
     const params = useParams();
 
+    // USE EFFECT CONDITIONS SO THAT THE URL's PERSIST AFTER RELOAD
     useEffect(() => {
         const movieID = params.id;
 
@@ -34,6 +39,8 @@ export default
         }
     }, [params.id]);
 
+
+    // FUNCTION TO HANDLE NAVIGATION BACK TO THE MAIN PAGE
     const handleBack = () => {
         history.push('/');
     }
@@ -42,7 +49,7 @@ export default
         <>
 
             <Grid container spacing={2} className='detailsContainer' vh={100} justifySelf='center'>
-                <Grid item xs={12} sm={6} sx={{ boxShadow: 2 }}>
+                <Grid item xs={12} sm={6} >
                     <Card className='MoviePhotoItem'>
                         <CardActions>
                             <Button onClick={handleBack} variant='contained' color='error' edge='start'>

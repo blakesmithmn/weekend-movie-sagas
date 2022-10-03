@@ -7,6 +7,9 @@ import { AppBar, Box, Toolbar, Typography, Button, IconButton, Grid, Container, 
 import MenuIcon from '@mui/icons-material/Menu';
 
 export default function Header() {
+    // HEADER COMPONENT SPANNING THE SCREEN SIZE - WITH A BORDER RADIUS CHANGE ON THE RIGHT
+    // NAVIGATION BUTTONS TO EASILY NAVIGATE THE APPLICATION
+
     const history = useHistory();
     const navigationSwitch = (navigation) => {
         history.push(navigation);
@@ -23,7 +26,7 @@ export default function Header() {
                                 The Movies Saga
                             </Typography>
                         </Grid>
-                        <Grid item xs={6} sm={6} textAlign='right'>
+                        <Grid item xs={4} sm={6} textAlign='right'>
                             <ButtonGroup>
                                 <Button variant='contained' color='secondary' onClick={(e) => navigationSwitch('/')}>
                                     Home

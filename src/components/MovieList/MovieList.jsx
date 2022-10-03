@@ -6,14 +6,19 @@ import { Paper, Card, CardContent, Typography, Button, CardActions, Box, Grid, C
 
 
 function MovieList() {
+
     const history = useHistory();
     const dispatch = useDispatch();
+
+    // IMPORTED STORE STATE OF ALL MOVIES IN THE DATABASE
     const movies = useSelector(store => store.movies);
 
+    // ON RELOAD FETCH NEW MOVIES!
     useEffect(() => {
         dispatch({ type: 'FETCH_MOVIES' });
     }, []);
 
+    // WHEN YOU CLICK A MOVIE POSTER YOU ARE BROUGHT TO THE DETAIL VIEW
     const showDetails = (movie) => {
         console.log(movie.id);
         history.push(`/details/${movie.id}`)

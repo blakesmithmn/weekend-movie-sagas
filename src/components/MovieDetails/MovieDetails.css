@@ -4,6 +4,7 @@
     justify-content: center;
     align-items: center;
     padding-bottom: 15px;
+    margin-top: 15px;
 }
 
 .MoviePhotoItem>button {
@@ -16,4 +17,6 @@
     justify-content: center;
     align-items: center;
     padding-bottom: 15px;
+    margin-top: 15px;
+
 }

@@ -8,15 +8,17 @@ import { Paper, Card, CardContent, Typography, Button, CardActions, Box, Grid, C
 
 
 export default function MovieSearch() {
+    //FORM TO HANDLE SEARCHING THE MOVIE DATABASE API
     const [search, setSearch] = useState('');
     const dispatch = useDispatch();
+    // SEND SEARCH STRING TO SAGA - HANDLE API SERVERSIDE
     const submitSearch = () => {
         dispatch({
             type: 'SAGA_SEARCH_MOVIES',
             payload: search
         })
         // CLEAR INPUT
-        // setSearch('');
+        setSearch('');
 
     }
 
@@ -26,8 +28,7 @@ export default function MovieSearch() {
         <>
             <Grid container spacing={4}>
                 <Grid item xs={12}>
-
-                    <form onSubmit={submitSearch}>
+                    <form onSubmit={submitSearch} className='searchBar'>
                         <TextField
                             id='outlined-basic'
                             size='small'
@@ -39,8 +40,10 @@ export default function MovieSearch() {
 
                         <Button id='button' type='submit' variant='contained'>Search</Button>
                     </form>
-
                 </Grid>
+
+                {/* API SEARCH RESULTS */}
+
                 {searchResults.map(movie => {
                     return (
                         <MovieSearchItem movie={movie} key={movie.id} />

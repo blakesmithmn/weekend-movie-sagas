@@ -2,6 +2,7 @@ import { Paper, Card, CardContent, Typography, Button, CardActions, Box, Grid, C
 import { useDispatch, useSelector } from 'react-redux';
 import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
+import swal from 'sweetalert';
 
 
 
@@ -10,9 +11,13 @@ export default function MovieSearchItem({ movie }) {
     const history = useHistory();
     // MOVIE VARIABLES 
     const movietitle = movie.title;
-
     const movieposter = `https://image.tmdb.org/t/p/original/${movie.poster_path}`
     const moviedescription = movie.overview;
+
+
+    // FUNCTION TO TAKE GIVEN API DATA AND SEND IT SERVERSIDE
+    // THEIR GENRE STUFF DOESN'T LINE UP WITH OURS SO IT JUST GETS AN UNSPECIFIED GENRE
+    // THIS SAVES FROM USER ERRORS IN ADDING THEIR OWN MOVIES THOUGH!
 
     const addToMovieList = () => {
         console.log(movietitle);
@@ -26,6 +31,11 @@ export default function MovieSearchItem({ movie }) {
                 description: moviedescription,
             }
         })
+        swal({
+            title: "Success!",
+            text: "Movie Added to List",
+            icon: "success",
+        });
         history.push('/');
     }
 
