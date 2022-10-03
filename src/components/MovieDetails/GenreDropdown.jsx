@@ -3,6 +3,11 @@ import { InputLabel, FormControl, Select, MenuItem, FormHelperText } from "@mui/
 
 
 export default function GenreDropdown() {
+
+    // UNFORTUNATELY NOT FINISHED WITHIN THE SPRINT
+    // CONCEPT WAS TO BE ABLE TO SEND A PUT REQUEST TO CHANGE MOVIE GENRES
+    // ESPECIALLY BECAUSE THE MOVIES FETCHED FROM THE API DON'T HAVE GENRES
+
     const dispatch = useDispatch();
     const genresArray = useSelector(store => store.genres);
 

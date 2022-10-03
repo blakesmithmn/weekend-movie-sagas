@@ -10,7 +10,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 
 function App() {
-
+  // CREATE THEME FOR CONSISTENT COLORS!
   const theme = createTheme({
     palette: {
       primary: {
