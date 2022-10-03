@@ -12,7 +12,8 @@ export default function MovieSearch() {
     const [search, setSearch] = useState('');
     const dispatch = useDispatch();
     // SEND SEARCH STRING TO SAGA - HANDLE API SERVERSIDE
-    const submitSearch = () => {
+    const submitSearch = (event) => {
+        event.preventDefault();
         dispatch({
             type: 'SAGA_SEARCH_MOVIES',
             payload: search
